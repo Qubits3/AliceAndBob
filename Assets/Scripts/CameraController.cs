@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    private Transform _target;
 
     [SerializeField] private Vector3 targetOffset;
 
     [SerializeField] private float smoothness;
+
+    private void Awake()
+    {
+        _target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+    }
 
     private void FixedUpdate()
     {
@@ -16,6 +21,6 @@ public class CameraController : MonoBehaviour
     private void FollowCharacter()
     {
         transform.position =
-            Vector3.Lerp(transform.position, target.position + targetOffset, Time.deltaTime * smoothness);
+            Vector3.Lerp(transform.position, _target.position + targetOffset, Time.deltaTime * smoothness);
     }
 }

@@ -2,12 +2,7 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
-/modules.xml
-/.idea.AliceAndBob.iml
 /contentModel.xml
+/.idea.AliceAndBob.iml
 /projectSettingsUpdater.xml
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+/modules.xml
